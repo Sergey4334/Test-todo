@@ -1,10 +1,239 @@
 @import "_fonts.scss";
 
 body {
-  background-color: brown;
-  font-family: "Poppins-SemiBold";
+  background-color: #e5e5e5;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-img {
-  width: 100px;
-  height: 200px;
+.wrapper {
+  max-width: 686px;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+.main {
+  max-width: 768px;
+  margin: 0px auto;
+}
+.block-head {
+  background: #889dea;
+  width: 100%;
+  min-height: 216px;
+  position: relative;
+}
+
+.block-head::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  bottom: -32px;
+  left: 0;
+  background: url("../img/subtract-left.png") no-repeat;
+  background-size: cover;
+}
+
+.block-head::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  bottom: 0px;
+  right: 0;
+  background: url("../img/subtract-right.png") no-repeat;
+  background-size: cover;
+}
+
+.top-list {
+  position: relative;
+  min-height: 216px;
+}
+.top-title {
+  font-family: "Poppins-Black";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  text-align: center;
+}
+.top-numbers {
+  display: flex;
+  padding: 32px 0px 38px 0px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.title-number {
+  font-family: "Poppins-SemiBold";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
+.num-block {
+  font-family: "Poppins-SemiBold";
+  font-weight: 600;
+  color: #fff;
+  font-size: 56px;
+  line-height: 56px;
+}
+.create {
+  position: absolute;
+  bottom: -29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button-create {
+  background: url("../img/Component 14.png") no-repeat;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+}
+//Task Edit Form
+.tasks {
+  padding: 72px 0px 42px 0px;
+  background-color: #fff;
+}
+.form-task {
+  min-height: 70px;
+}
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.input-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Style Check-
+
+input[type="checkbox"]:not(:checked) {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.task-input::placeholder {
+  color: #bbbbbb;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+.task-input {
+  color: #bbbbbb;
+  font-family: "Poppins";
+  font-size: 14px;
+  max-width: 512px;
+  margin-left: 26px;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+
+input[type="checkbox"]:not(:checked):before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #889dea;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #fff;
+}
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #889dea;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #889dea;
+}
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: url("../img/Vector 3.png") no-repeat;
+}
+
+.date-now span {
+  color: #889dea;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0px 8px;
+}
+.input-edit {
+  display: flex;
+  justify-content: center;
+  padding: 0px 30px 0px 0px;
+}
+.edit-task {
+  margin: 0px 13px;
+  width: 24px;
+  height: 24px;
+  background: url("../img/edit.png") no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.delete-task {
+  cursor: pointer;
+  margin: 0px 13px;
+  width: 24px;
+  height: 24px;
+  background: url("../img/del.png") no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.input-form {
+  width: 100%;
+  border-bottom: 1px solid #c7c7c7;
+}
+.task-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 1em;
+}
+//Button create Task
+.create-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tast-btn {
+  background: #88eaa9;
+  outline: none;
+  padding: 12px 21.5px 12px 21.5px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins-SemiBold";
+  font-weight: 600;
+  border-radius: 11px;
+  cursor: pointer;
+  margin-top: 26px;
+  display: flex;
 }

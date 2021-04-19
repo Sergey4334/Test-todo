@@ -141,7 +141,7 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
+        test: /\.(svg|png|jpg|gif)$/,
         use: [
           {
             loader: "file-loader",
@@ -152,7 +152,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(?:|eot|svg|ttf|woff|woff2)$/,
+        test: /\.(?:|ttf|woff|woff2)$/,
         use: [
           {
             loader: "file-loader",

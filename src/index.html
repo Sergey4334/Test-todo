@@ -8,20 +8,88 @@
     <title>ToDo Project</title>
   </head>
   <body>
-    <header>
-      <h1>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum at
-        perferendis officia, tempore distinctio ullam non mollitia atque sint
-        magnam illo, aliquid facilis dignissimos! Obcaecati nulla alias
-        sapiente? Doloremque, obcaecati.
-      </h1>
-      <h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptas
-        harum nam amet aliquam repellendus facilis odit nihil, necessitatibus
-        libero nostrum rerum placeat commodi aperiam temporibus sapiente! Enim,
-        obcaecati repudiandae.
-      </h2>
-      <img src="./img/i.jpg" alt="Alt" />
-    </header>
+    <main class="main">
+      <div class="block-head">
+        <div class="wrapper">
+          <div class="top-list">
+            <div class="top-title">To Do list</div>
+            <div class="top-numbers">
+              <div class="number-item">
+                <div class="title-number">Scope</div>
+                <div class="num-block">15</div>
+              </div>
+              <div class="number-item">
+                <div class="title-number">Active</div>
+                <div class="num-block">8</div>
+              </div>
+              <div class="number-item">
+                <div class="title-number">Successful</div>
+                <div class="num-block">7</div>
+              </div>
+            </div>
+            <div class="create">
+              <div class="button-create"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tasks">
+        <div class="wrapper">
+          <form class="form-task" name="addTask">
+            <div class="list-task">
+              <div class="form-item">
+                <div class="input-check">
+                  <input type="checkbox" class="custom-checkbox" name="check" />
+                  <div class="date-now"></div>
+                </div>
+                <div class="input-edit">
+                  <div class="edit-task"></div>
+                  <div class="delete-task"></div>
+                </div>
+              </div>
+              <div class="input-form">
+                <textarea
+                  name="task"
+                  class="task-input"
+                  placeholder="Please Enter tast..."
+                  rows="1"
+                  style="height: 1em"
+                  id="text"
+                ></textarea>
+              </div>
+              <div class="create-btn">
+                <button type="submit" class="tast-btn">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 36 36"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 7.49994V28.4999"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.50001 18H28.5"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  Create new task
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
