@@ -3,17 +3,6 @@ import "../index.html";
 import "../img/Frame.svg";
 //import $ from "jquery";
 
-const now = new Date(2021, 3, 19);
-const op = {
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-};
-const resultDate = now.toLocaleString("en-US", op);
-const dateNow = document.querySelector(".form-item .input-check .date-now");
-const span = document.createElement("span");
-span.textContent = resultDate;
-dateNow.insertAdjacentElement("afterbegin", span);
 // console.log(span);
 
 //Resise TextArea
@@ -70,6 +59,25 @@ const tasks = [
     return acc;
   }, {});
 
+  function dateI() {
+    const now = new Date();
+    const op = {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    };
+    const resultDate = now.toLocaleString("en-US", op);
+    const dateNow = document.querySelectorAll(".date-now");
+    dateNow.forEach(function (item) {
+      const span = document.createElement("span");
+      span.textContent = resultDate;
+      item.appendChild(span);
+      console.log(item);
+    });
+    return;
+  }
+  dateI();
+
   const form = document.forms["addTask"];
   const inputTask = form.elements["task"];
   const listContainer = document.querySelector(".list-task");
@@ -93,9 +101,12 @@ const tasks = [
   }
 
   function listItemTemplate({ _id, title } = {}) {
+    const fragmentItems = document.createElement("div");
+    fragmentItems.classList.add("list-items");
+    fragmentItems.setAttribute("data-task-id", _id);
+
     const formItem = document.createElement("div");
     formItem.classList.add("form-item");
-    formItem.setAttribute("data-task-id", _id);
 
     const inputCheck = document.createElement("div");
     inputCheck.classList.add("input-check");
@@ -103,6 +114,7 @@ const tasks = [
     const checkbox = document.createElement("input");
     checkbox.classList.add("custom-checkbox");
     checkbox.setAttribute("type", "checkbox");
+
     const datenow = document.createElement("div");
     datenow.classList.add("date-now");
 
@@ -125,7 +137,7 @@ const tasks = [
     const TextArea = document.createElement("textarea");
     TextArea.classList.add("task-input");
     TextArea.id = "text";
-    TextArea.setAttribute("placeholder", title);
+    TextArea.textContent = title;
     TextArea.setAttribute("name", "task");
     TextArea.setAttribute("row", "1");
     inputform.appendChild(TextArea);
@@ -133,9 +145,10 @@ const tasks = [
     //* Добавляем елементы в наш список LI
     formItem.appendChild(inputCheck);
     formItem.appendChild(inputedit);
-    formItem.appendChild(inputform);
+    fragmentItems.appendChild(formItem);
+    fragmentItems.appendChild(inputform);
 
-    return formItem;
+    return fragmentItems;
   }
 
   //Form Sumit Fu
@@ -148,14 +161,13 @@ const tasks = [
     }
     const task = createNewTask(titleValue);
     const listItem = listItemTemplate(task);
-    listContainer.insertAdjacentElement("afterbegin", listItem);
+    listContainer.insertAdjacentElement("beforeend", listItem);
     form.reset();
   }
 
-  function createNewTask(title, body) {
+  function createNewTask(title) {
     const newTask = {
       title,
-      body,
       completed: false,
       _id: `task-${Math.random()}`,
     };
@@ -183,3 +195,5 @@ const tasks = [
     }
   }
 })(tasks);
+
+//console.log(dateNow);

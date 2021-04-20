@@ -137,7 +137,7 @@ input[type="checkbox"]:checked {
   color: #bbbbbb;
   font-family: "Poppins";
   font-size: 14px;
-  max-width: 512px;
+  width: 70%;
   margin-left: 26px;
   text-align: left;
   overflow: hidden;
@@ -212,10 +212,9 @@ input[type="checkbox"]:checked::after {
   border-bottom: 1px solid #c7c7c7;
 }
 .task-input {
-  width: 100%;
   outline: none;
   border: none;
-  height: 1em;
+  height: 1.5em;
 }
 //Button create Task
 .create-btn {
@@ -236,4 +235,21 @@ input[type="checkbox"]:checked::after {
   cursor: pointer;
   margin-top: 26px;
   display: flex;
+}
+.tast-btn span {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.tast-btn:hover span {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
 }

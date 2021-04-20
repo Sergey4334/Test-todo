@@ -37,55 +37,61 @@
         <div class="wrapper">
           <form class="form-task" name="addTask">
             <div class="list-task">
-              <div class="form-item">
-                <div class="input-check">
-                  <input type="checkbox" class="custom-checkbox" name="check" />
-                  <div class="date-now"></div>
+              <div class="list-items">
+                <div class="form-item">
+                  <div class="input-check">
+                    <input
+                      type="checkbox"
+                      class="custom-checkbox"
+                      name="check"
+                    />
+                    <div class="date-now"></div>
+                  </div>
+                  <div class="input-edit">
+                    <div class="edit-task"></div>
+                    <div class="delete-task"></div>
+                  </div>
                 </div>
-                <div class="input-edit">
-                  <div class="edit-task"></div>
-                  <div class="delete-task"></div>
+                <div class="input-form">
+                  <textarea
+                    name="task"
+                    class="task-input"
+                    placeholder="Please Enter tast..."
+                    rows="1"
+                    style="height: 1em"
+                    id="text"
+                  ></textarea>
                 </div>
               </div>
-              <div class="input-form">
-                <textarea
-                  name="task"
-                  class="task-input"
-                  placeholder="Please Enter tast..."
-                  rows="1"
-                  style="height: 1em"
-                  id="text"
-                ></textarea>
-              </div>
-              <div class="create-btn">
-                <button type="submit" class="tast-btn">
-                  <span>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 36 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M18 7.49994V28.4999"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M7.50001 18H28.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  Create new task
-                </button>
-              </div>
+            </div>
+            <div class="create-btn">
+              <button type="submit" class="tast-btn">
+                <span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 7.49994V28.4999"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.50001 18H28.5"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                Create new task
+              </button>
             </div>
           </form>
         </div>
